@@ -24,7 +24,7 @@ let resumeData = {
       ],
     "aboutme":"As a web developer, I am passionate about writing functional, tested, maintainable code. I take pride in building web applications that meet the needs of all stakeholders: engineers, end users, and businesses. When working on a team, I thrive in an environment of open communication, collaborative decision making and autonomous work. I am very analytical and love to work with other people to test ideas and weigh the alternative solutions to a hard problem.  have experience writing full stack web apps from scratch.",
     "address":"China",
-    "website":"https://rbhatia46.github.io",
+    "website":"https://ckmportfolio.herokuapp.com/",
     "education":[
       {
         "UniversityName":"International University of Nature, Society and Man",
