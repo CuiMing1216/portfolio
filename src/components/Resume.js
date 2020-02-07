@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component } from 'react';
 import Education from './Education';
 import Work from './Work';
 import Skill from './Skill';

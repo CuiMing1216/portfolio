@@ -1,4 +1,4 @@
-import React, {component, Component} from 'react';
+import React, {Component} from 'react';
 export default class Work extends Component{
     render(){
         let item = this.props.item;
