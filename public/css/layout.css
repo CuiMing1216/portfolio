@@ -40,6 +40,29 @@ header {
    overflow: hidden;
 }
 
+
+/* #contact label {
+   font-weight: bold;
+   font-size: 16px;
+ }
+ 
+ #contact #submit_button {
+   background-color: #B22222;
+   height: 30px;
+   width: 20%;
+   color: #FFFFFF;
+   font-weight: bold;
+ }
+ 
+ #contact .contact_input_textarea{
+   background-color: #D3D3D3;
+   color: #2F4F4F;
+   width: 250px;
+   margin-bottom: 10px;
+   box-shadow: 5px 5px 2px 2px #696969;
+ } */
+
+
 /* vertically center banner section */
 header:before {
    content: '';
@@ -851,14 +874,14 @@ call-to-action .button {
 
 
 /* contact form */
-#contact form { margin-bottom: 30px; }
+#contact form { margin-bottom: 20px; }
 #contact label {
    font: 15px/24px 'opensans-bold', sans-serif;
    margin: 12px 0;
    color: #EBEEEE;
 	display: inline-block;
 	float: left;
-   width: 26%;
+   width: 100%;
 }
 #contact input,
 #contact textarea,
@@ -866,13 +889,16 @@ call-to-action .button {
    padding: 18px 20px;
 	color: #eee;
 	background: #373233;
-	margin-bottom: 42px;
+	/* margin-bottom: 42px; */
 	border: 0;
 	outline: none;
    font-size: 15px;
    line-height: 24px;
-   width: 65%;
+   width: 100%;
 }
+.row .submit {text-align: center !important;}
+#contact_submit {background-color: hsl(0, 89%, 35%) !important; width: 30% !important; text-align: center !important; margin: auto !important;}
+#contact_submit:hover {background-color: #45a049 !important;}
 #contact input:focus,
 #contact textarea:focus,
 #contact select:focus {
