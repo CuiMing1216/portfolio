@@ -9,7 +9,6 @@ export default class ContactUs extends Component {
     this.handleChangeName = this.handleChangeName.bind(this);
     this.handleChangeMessage = this.handleChangeMessage.bind(this);
     this.handleChangeEmail = this.handleChangeEmail.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChangeName(event) {
@@ -23,7 +22,7 @@ export default class ContactUs extends Component {
   }
 
 
-  handleSubmit(event) {
+  handleSubmit=(event)=> {
     event.preventDefault();
     // alert('A name was submitted: ' + this.state.name + this.state.email + this.state.message);
     // const {name, email, message} = this.state;
