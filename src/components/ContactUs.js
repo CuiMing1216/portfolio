@@ -43,7 +43,7 @@ export default class ContactUs extends Component {
     })
       .then(function(response){console.log(response);})
       .catch(function(error){});
-    
+    alert('A Name was submitted: ' + this.state.name +'  An Email was submitted: '+ this.state.email + '  A Message was submitted: '+this.state.message);
   }
 
   render() {
