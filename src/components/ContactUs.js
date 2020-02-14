@@ -14,12 +14,15 @@ export default class ContactUs extends Component {
 
   handleChangeName(event) {
     this.setState({name: event.target.value});
+    event.target.value = '';
   }
   handleChangeEmail(event) {
     this.setState({email: event.target.value});
+    event.target.value = '';
   }
   handleChangeMessage(event) {
     this.setState({message: event.target.value});
+    event.target.value = '';
   }
 
 
@@ -44,7 +47,7 @@ export default class ContactUs extends Component {
         message: this.state.message
       }
     })
-      .then(function(response){console.log(response);this.setState({name:'', email:'', message:''});})
+      .then(function(response){console.log(response);})
       .catch(function(error){});
        
   
