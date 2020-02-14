@@ -4,7 +4,7 @@ export default class ContactUs extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {name: '', emai:'', message:''};
+    this.state = {name: '', email:'', message:''};
 
     this.handleChangeName = this.handleChangeName.bind(this);
     this.handleChangeMessage = this.handleChangeMessage.bind(this);
@@ -32,6 +32,9 @@ export default class ContactUs extends Component {
     // alert(nameemail.name);
     // axios.post('http://localhost:8080/result_page', nameemail).then(()=>console.log('sucess')).catch(err=>{console.error(err);});
 
+    alert('A Name was submitted: ' + this.state.name +'  An Email was submitted: '+ this.state.email + '  A Message was submitted: '+this.state.message);
+
+
     axios({
       method: 'POST',
       url:'https://portfserver.herokuapp.com/',      
@@ -41,10 +44,10 @@ export default class ContactUs extends Component {
         message: this.state.message
       }
     })
-      .then(function(response){console.log(response);})
+      .then(function(response){console.log(response);this.setState({name:'', email:'', message:''});})
       .catch(function(error){});
-    alert('A Name was submitted: ' + this.state.name +'  An Email was submitted: '+ this.state.email + '  A Message was submitted: '+this.state.message);
-    this.state = {name: '', emai:'', message:''};  
+       
+  
   }
 
   render() {
