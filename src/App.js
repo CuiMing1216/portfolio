@@ -1,28 +1,30 @@
 import React, { Component } from 'react';
-import Header from './components/Header';
-import About from './components/About';
-import Resume from './components/Resume';
-import Portfolio from './components/Portfolio';
-import Testimonials from  './components/Testimonials';
-import ContactUs from './components/ContactUs';
-import Footer from './components/Footer';
-import resumeData from './resumeData';
+import Main from './components/main';
+import History from './components/History';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import NotFound from './components/NotFound';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      resumeData: {}
+    };
+  }
+
   render() {
-    
     return (
-      <div className="App">
-        <Header resumeData={resumeData}/>
-        <About resumeData={resumeData}/>
-       
-        <Resume resumeData={resumeData}/>
-        <Portfolio resumeData={resumeData}/>
-        <Testimonials resumeData={resumeData}/>
-        <ContactUs resumeData={resumeData}/>
-        <Footer resumeData={resumeData}/>
-        
-      </div>
+      <Router>
+        <div className="App">
+          <Route exact path="/"><NotFound /></Route>
+          <Route exact path="/:name" 
+            render={({match}) => {
+              const name = match.params.name;
+              return <Main name={name}/>;
+            }} />
+          <Route path="/admin/history"><History /></Route>
+        </div>
+      </Router>
     );
   }
 }
